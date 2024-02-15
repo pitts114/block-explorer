@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Setup
+
+### Install Bitcoin Core
+
+See https://github.com/bitcoin/bitcoin/tree/master/doc.
+
+## Bitcoin Core
+
+Helpful commands:
+
+```bash
+# example: get the balance of the wallet
+bin/bitcoin-cli getblockchaininfo
+```
