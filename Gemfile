@@ -53,6 +53,10 @@ group :development, :test do
   gem "solargraph", require: false
 end
 
+group :test do
+  gem "vcr", "~> 6.2"
+end
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
