@@ -50,6 +50,7 @@ group :development, :test do
   gem 'dotenv-rails', "~> 2.8.1"
   gem "rspec-rails", "~> 6.1.1"
   gem "rubocop", "~> 1.60", require: false
+  gem "solargraph", require: false
 end
 
 group :development do
