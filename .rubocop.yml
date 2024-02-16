@@ -11,3 +11,12 @@
 
 Style/Documentation:
   Enabled: false
+
+# The Style/HashSyntax rule is giving false positives.
+Style/HashSyntax:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - "spec/**/*"
