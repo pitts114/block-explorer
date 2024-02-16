@@ -35,4 +35,4 @@
 /config/master.key
 
 # Ignore bitcoind data directories
-/docker/bitcoind/regtest
+/docker/bitcoind/data/

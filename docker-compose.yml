@@ -20,7 +20,6 @@ services:
   bitcoind:
     image: cryptodockerhub/bitcoin-core:26.0 # https://github.com/crypto-docker/bitcoin-core
     container_name: bitcoind
-    network_mode: host # bridge doesnt seem to work
     ports:
     - 8332:8332
     - 18332:18332
@@ -31,7 +30,7 @@ services:
 
     volumes:
       - ./docker/bitcoind/config.conf:/data/config.conf
-      - ./docker/bitcoind/regtest:/home/coinuser/.bitcoin/regtest/
+      - ./docker/bitcoind/data:/home/coinuser/.bitcoin/
       - bitcoind-data:/data
 
 volumes:
