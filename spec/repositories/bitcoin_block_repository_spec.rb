@@ -16,11 +16,11 @@ RSpec.describe BitcoinBlockRepository do
       allow(client).to receive(:call_rpc_method).with(method: 'getblockcount')
                                                 .and_return(current_block_count)
       allow(client).to receive(:call_rpc_method).with(method: 'getblockhash', params: [100])
-                                                .and_return('block_hash')
+                                                .and_return('result' => 'block_hash')
       allow(client).to receive(:call_rpc_method).with(method: 'getblock', params: ['block_hash', 1])
                                                 .and_return(most_recent_block)
       allow(client).to receive(:call_rpc_method).with(method: 'getblockhash', params: [99])
-                                                .and_return('most_recent_block_hash_99')
+                                                .and_return('result' => 'most_recent_block_hash_99')
       allow(client).to receive(:call_rpc_method).with(method: 'getblock', params: ['most_recent_block_hash_99', 1])
                                                 .and_return(block)
     end

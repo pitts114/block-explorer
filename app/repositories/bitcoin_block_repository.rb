@@ -18,7 +18,7 @@ class BitcoinBlockRepository
     current_block_count = @client.call_rpc_method(method: 'getblockcount')['result']
 
     ((current_block_count - count + 1)..current_block_count).reverse_each.map do |height|
-      block_hash = @client.call_rpc_method(method: 'getblockhash', params: [height])
+      block_hash = @client.call_rpc_method(method: 'getblockhash', params: [height])['result']
       @client.call_rpc_method(method: 'getblock', params: [block_hash, 1])
     end
   end
