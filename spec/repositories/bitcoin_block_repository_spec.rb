@@ -10,7 +10,7 @@ RSpec.describe BitcoinBlockRepository do
   let(:most_recent_block) { double(:most_recent_block) }
 
   describe '#get_latest_blocks' do
-    let(:current_block_count) { 100 }
+    let(:current_block_count) { { 'result' => 100 } }
 
     before do
       allow(client).to receive(:call_rpc_method).with(method: 'getblockcount')
