@@ -3,7 +3,7 @@
 class GetLatestBlocksCommand
   include Callable
 
-  def initialize(block_repository: BitcoinBlockRepository)
+  def initialize(block_repository: BitcoinBlockRepository.new)
     @block_repository = block_repository
   end
 
