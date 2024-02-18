@@ -29,7 +29,7 @@ module Bitcoin
     end
     # rubocop:enable Metrics/ParameterLists
 
-    def execute_rpc_method(method:, params: {})
+    def call_rpc_method(method:, params: [])
       request = build_request(method, params)
       response = send_request(request)
       parse_response(response)

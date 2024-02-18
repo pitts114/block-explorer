@@ -27,9 +27,9 @@ RSpec.describe Bitcoin::Client do
   let(:time) { double('Time') }
   let(:uri) { URI.parse("http://#{rpc_connect}:#{rpc_port}") }
 
-  describe '#execute_rpc_method' do
+  describe '#call_rpc_method' do
     let(:method) { 'getblockcount' }
-    let(:params) { {} }
+    let(:params) { %w[foo bar] }
     let(:request) { double('Net::HTTP::Post') }
     let(:response) { double('Net::HTTPResponse', body: '{"result": 123}') }
 
@@ -46,7 +46,7 @@ RSpec.describe Bitcoin::Client do
     end
 
     it 'returns the result' do
-      expect(subject.execute_rpc_method(method: method, params: params)).to eq('result' => 123)
+      expect(subject.call_rpc_method(method: method, params: params)).to eq('result' => 123)
     end
   end
 end

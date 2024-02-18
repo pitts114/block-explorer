@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require 'bitcoin/client'
 
 RSpec.describe Bitcoin::Client, type: :integration do
   let(:rpc_port) { ENV['BITCOIN_RPC_PORT'] }
@@ -17,12 +16,10 @@ RSpec.describe Bitcoin::Client, type: :integration do
     )
   end
 
-  describe '#execute_rpc_method' do
+  describe '#call_rpc_method' do
     it 'successfully calls the bitcoind service and gets blockchain info' do
-      VCR.use_cassette('bitcoin_getblockchaininfo') do
-        response = client.execute_rpc_method(method: 'getblockchaininfo')
-        expect(response['result']['blocks']).to be_an(Integer)
-      end
+      response = client.call_rpc_method(method: 'getblockchaininfo')
+      expect(response['result']['blocks']).to be_an(Integer)
     end
   end
 end
