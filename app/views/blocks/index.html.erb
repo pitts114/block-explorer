@@ -5,7 +5,7 @@
 <div id="blocks">
   <% @blocks.each do |block| %>
     <p>
-      <%= block.to_json %>
+      <%= block['hash'] %>
     </p>
   <% end %>
 </div>
