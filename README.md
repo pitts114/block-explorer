@@ -5,6 +5,8 @@ An incredibly basic Bitcoin block explorer.
 ## Setup
 
 ```bash
+cp .env.example .env
+
 cat .ruby-version | rvm use
 bundle install
 
