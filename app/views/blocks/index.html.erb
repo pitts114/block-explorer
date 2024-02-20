@@ -2,10 +2,23 @@
 
 <h1>Blocks</h1>
 
-<div id="blocks">
-  <% @blocks.each do |block| %>
-    <p>
-      <%= block['hash'] %>
-    </p>
-  <% end %>
-</div>
+<table id="blocks">
+  <thead>
+    <tr>
+      <th>Height</th>
+      <th>Time</th>
+      <th>Transactions</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blocks.each do |block| %>
+      <tr>
+        <td><%= block['height'] %></td>
+        <td><%= block['time'] %></td>
+        <td><%= block['nTx'] %></td>
+        <td><%= block['size'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
