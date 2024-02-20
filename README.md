@@ -1,29 +1,22 @@
-# README
+# Block Explorer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+An incredibly basic Bitcoin block explorer.
 
 ## Setup
+
+```bash
+cat .ruby-version | rvm use
+bundle install
+
+docker compose up
+
+bundle exec rails db:create
+bundle exec rails db:migrate
+
+bundle exec rails s
+```
+
+After starting the server, visit http://localhost:3000/blocks.
 
 ### Install Bitcoin Core
 
@@ -34,6 +27,6 @@ See https://github.com/bitcoin/bitcoin/tree/master/doc.
 Helpful commands:
 
 ```bash
-# example: get the balance of the wallet
+# example: get blockchain info
 bin/bitcoin-cli getblockchaininfo
 ```
