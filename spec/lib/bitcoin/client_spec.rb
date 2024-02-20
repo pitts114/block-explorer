@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bitcoin/client'
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Bitcoin::Client do
   subject do

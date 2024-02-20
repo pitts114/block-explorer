@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'spec_helper'
+require 'bitcoin/client'
+require 'dotenv/load'
 
 RSpec.describe Bitcoin::Client, type: :integration do
   let(:rpc_port) { ENV['BITCOIN_RPC_PORT'] }
