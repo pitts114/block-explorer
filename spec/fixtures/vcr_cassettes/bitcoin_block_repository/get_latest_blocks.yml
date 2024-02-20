@@ -1,0 +1,183 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:18443/
+    body:
+      encoding: UTF-8
+      string: '{"jsonrpc":"1.0","id":"getblockcount_1708399313","method":"getblockcount","params":[]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:18443
+      Authorization:
+      - Basic Zm9vOmJhcg==
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 20 Feb 2024 03:21:04 GMT
+      Content-Length:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: '{"result":1,"error":null,"id":"getblockcount_1708399313"}
+
+        '
+  recorded_at: Tue, 20 Feb 2024 03:21:04 GMT
+- request:
+    method: post
+    uri: http://localhost:18443/
+    body:
+      encoding: UTF-8
+      string: '{"jsonrpc":"1.0","id":"getblockhash_1708399313","method":"getblockhash","params":[1]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:18443
+      Authorization:
+      - Basic Zm9vOmJhcg==
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 20 Feb 2024 03:21:04 GMT
+      Content-Length:
+      - '122'
+    body:
+      encoding: UTF-8
+      string: '{"result":"74443e86924b475d5e30f4ab4d282fc1ab1d8c1e3e43ab7a89dfd44bf4266eab","error":null,"id":"getblockhash_1708399313"}
+
+        '
+  recorded_at: Tue, 20 Feb 2024 03:21:04 GMT
+- request:
+    method: post
+    uri: http://localhost:18443/
+    body:
+      encoding: UTF-8
+      string: '{"jsonrpc":"1.0","id":"getblock_1708399313","method":"getblock","params":["74443e86924b475d5e30f4ab4d282fc1ab1d8c1e3e43ab7a89dfd44bf4266eab",1]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:18443
+      Authorization:
+      - Basic Zm9vOmJhcg==
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 20 Feb 2024 03:21:04 GMT
+      Content-Length:
+      - '676'
+    body:
+      encoding: UTF-8
+      string: '{"result":{"hash":"74443e86924b475d5e30f4ab4d282fc1ab1d8c1e3e43ab7a89dfd44bf4266eab","confirmations":1,"height":1,"version":536870912,"versionHex":"20000000","merkleroot":"e9c926c85bc8bcdacece4fd24d803e6e0d4746f9afaecef9ce72127123ca432b","time":1708397886,"mediantime":1708397886,"nonce":1,"bits":"207fffff","difficulty":4.656542373906925e-10,"chainwork":"0000000000000000000000000000000000000000000000000000000000000004","nTx":1,"previousblockhash":"0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206","strippedsize":212,"size":248,"weight":884,"tx":["e9c926c85bc8bcdacece4fd24d803e6e0d4746f9afaecef9ce72127123ca432b"]},"error":null,"id":"getblock_1708399313"}
+
+        '
+  recorded_at: Tue, 20 Feb 2024 03:21:04 GMT
+- request:
+    method: post
+    uri: http://localhost:18443/
+    body:
+      encoding: UTF-8
+      string: '{"jsonrpc":"1.0","id":"getblockhash_1708399313","method":"getblockhash","params":[0]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:18443
+      Authorization:
+      - Basic Zm9vOmJhcg==
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 20 Feb 2024 03:21:04 GMT
+      Content-Length:
+      - '122'
+    body:
+      encoding: UTF-8
+      string: '{"result":"0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206","error":null,"id":"getblockhash_1708399313"}
+
+        '
+  recorded_at: Tue, 20 Feb 2024 03:21:04 GMT
+- request:
+    method: post
+    uri: http://localhost:18443/
+    body:
+      encoding: UTF-8
+      string: '{"jsonrpc":"1.0","id":"getblock_1708399313","method":"getblock","params":["0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",1]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:18443
+      Authorization:
+      - Basic Zm9vOmJhcg==
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 20 Feb 2024 03:21:04 GMT
+      Content-Length:
+      - '665'
+    body:
+      encoding: UTF-8
+      string: '{"result":{"hash":"0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206","confirmations":2,"height":0,"version":1,"versionHex":"00000001","merkleroot":"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b","time":1296688602,"mediantime":1296688602,"nonce":2,"bits":"207fffff","difficulty":4.656542373906925e-10,"chainwork":"0000000000000000000000000000000000000000000000000000000000000002","nTx":1,"nextblockhash":"74443e86924b475d5e30f4ab4d282fc1ab1d8c1e3e43ab7a89dfd44bf4266eab","strippedsize":285,"size":285,"weight":1140,"tx":["4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"]},"error":null,"id":"getblock_1708399313"}
+
+        '
+  recorded_at: Tue, 20 Feb 2024 03:21:04 GMT
+recorded_with: VCR 6.2.0

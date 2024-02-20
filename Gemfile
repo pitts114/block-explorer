@@ -53,6 +53,8 @@ group :development, :test do
   gem "rspec-rails", "~> 6.1.1"
   gem "rubocop", "~> 1.60", require: false
   gem "solargraph", require: false
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do
