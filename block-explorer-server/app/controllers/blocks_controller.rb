@@ -5,6 +5,11 @@ class BlocksController < ApplicationController
   def index
     result = GetLatestBlocksCommand.call(count: 10)
     @blocks = result.blocks
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @blocks }
+    end
   end
 
   # GET /blocks/1 or /blocks/1.json
