@@ -1,6 +1,6 @@
-# Block Explorer
+# Block Explorer Server
 
-An incredibly basic Bitcoin block explorer.
+A Ruby on Rails app that interacts with a Bitcoin Core node and serves a RESTful API and server-side rendered UI.
 
 ## Setup
 
