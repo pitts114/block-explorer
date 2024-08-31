@@ -31,4 +31,7 @@ Helpful commands:
 ```bash
 # example: get blockchain info
 bin/bitcoin-cli getblockchaininfo
+
+# mine a block
+bin/bitcoin-cli -generate 1;
 ```
