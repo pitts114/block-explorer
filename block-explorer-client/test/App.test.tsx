@@ -2,10 +2,11 @@ import { render } from '@testing-library/react';
 import { screen, fireEvent } from '@testing-library/dom';
 import 'jsdom';
 import { Provider } from 'react-redux';
-import { store } from '../src/app/store';
+import { setupStore } from '../src/app/store';
 import App from '../src/App';
 
 test('renders App component correctly', () => {
+  const store = setupStore();
   render(
     <Provider store={store}>
       <App />

@@ -1,9 +1,18 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { blockExplorerApiSlice } from "../features/bitcoin/block-explorer-api-slice";
 
-export const store = configureStore({
-  reducer: (state = {}, action) => state,reducer: (state = {}, action) => state
+const rootReducer = combineReducers({
+  [blockExplorerApiSlice.reducerPath]: blockExplorerApiSlice.reducer
 });
 
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
-export type AppStore = typeof store;
+export const setupStore = (preloadedState?: Partial<RootState>) => configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware().concat(blockExplorerApiSlice.middleware);
+  },
+  preloadedState
+});
+
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore["dispatch"];
